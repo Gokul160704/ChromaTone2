@@ -1,0 +1,79 @@
+:root {
+  --brown-700:#8C4B2F;
+  --brown-600:#A5673F;
+  --brown-800:#6f351f;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(16px,4vw,60px);
+  background: #f7efe7 url("/images/bg-waves.jpg") center/cover no-repeat;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 480px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.title {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(42px, 7vw, 90px);
+  color: var(--brown-700);
+  margin: 0;
+}
+
+.tagline {
+  font-size: 19px;
+  opacity: 0.85;
+}
+
+.cta {
+  margin-top: 10px;
+  width: fit-content;
+  background: var(--brown-600);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cta:hover {
+  background: var(--brown-800);
+}
+
+.rack {
+  width: 470px;
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .brand { justify-content: center; }
+  .left { align-items: center; }
+  .rack { width: 100%; max-width: 420px; }
+}
